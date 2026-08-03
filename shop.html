@@ -68,11 +68,30 @@ checkUser();
     background-color: chocolate;
 }
 </style>
-        
+        <!--<button class="btn" onclick="payWithPaystack()">Buy Now</button>-->
     </div>
 </section>
 
+<!--<section class="features">
+    <div class="card">
+        <img src="images/meeow.jpeg"  style="height:200px; width:200px; border-radius: 20px; flex-direction: row;">
+        <h3 style="color: aliceblue;">Self Affirmation</h3>
+        <p></p>
+        <a href="#" id="daniel">Download</a>
+        <!--<button class="btn" onclick="payWithPaystack()">Buy Now</button>
+    </div>
+</section>
 
+<section class="features">
+    <div class="card">
+        <img src="images/img_snow.jpg"  style="height:200px; width:200px; border-radius: 20px; flex-direction: row;">
+        <h3 style="color: aliceblue;">Wisdom Ebook 2</h3>
+        <p></p>
+        <a href="#" id="daniel">Download</a>
+    
+        <!--<button class="btn" onclick="payWithPaystack()">Buy Now</button>-->
+    </div>
+</section>
 <style>
     .features {
     margin: 10vh;
@@ -90,7 +109,21 @@ background-color: goldenrod;
     }
 </style>
 
-
+<!--<script>
+function payWithPaystack(){
+    var handler = PaystackPop.setup({
+        key: 'pk_test_1f214626b2fc4cea9d8f2805bc8cac37adc0c39a', // Replace with your Paystack Public Key
+        email: 'customer@email.com',
+        amount: 500000, // 5000 Naira in kobo
+        currency: "NGN",
+        callback: function(response){
+            alert('Payment successful!');
+            window.location = "dashboard.html";
+        }
+    });
+    handler.openIframe();
+}
+</script>-->
 
 </body>
 <footer class="fead">
