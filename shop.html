@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shop - His Word Of Wisdom</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="images/img_snow.jpg">
+<script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body style="background-color:#1e1e;">
+
+<header style="text-align: center; margin: 20px; padding: 20px;">
+<h1>Digital Shop</h1>
+</header>
+
+<section class="features">
+    <div>
+        <img src="images/oluwanimilo.jpeg" style="height:200px; width:200px; border-radius: 20px; flex-direction: row;">
+        <h3 style="color: aliceblue;">Caution to Generation</h3>
+        <p style="color: aliceblue;">Available</p>
+        <div></div>
+        <button onclick="payWithPaystack()">Buy Now</button>
+        <script>
+function payWithPaystack(){
+  let handler = PaystackPop.setup({
+    key: 'pk_test_fbd662cd8a1de95e63081da4ce250b46070a3e61',
+    email: 'gideonoluwadare22@email.com',
+    amount: 500000, // ₦5000
+    currency: "NGN",
+
+    callback: function(response){
+      alert('Payment successful!');
+      window.location.href = "download.html";
+    },
+
+    onClose: function(){
+      alert('Transaction cancelled');
+    }
+  });
+
+  handler.openIframe();
+  
+}
+</script>
+
+
+<script>
+async function checkUser() {
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    alert("You must login first!");
+    window.location.href = "login.html";
+  }
+}
+
+checkUser();
+</script>
+<style>
+    #daniel {
+    text-decoration: double;
+    border: 1px rgb(red, brown, blue);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+#daniel:hover {
+    background-color: chocolate;
+}
+</style>
+        
+    </div>
+</section>
+
+
+<style>
+    .features {
+    margin: 10vh;
+    padding: 10vh;
+    background-color: #1e1e1e;
+    text-align: center;
+    border-style: double;
+    border-radius: 20px;
+    }
+    .btn{
+        border-radius: 20px;
+    }
+    .btn:hover {
+background-color: goldenrod;
+    }
+</style>
+
+
+
+</body>
+<footer class="fead">
+     <p>&copy; 2026 Word of His Wisdom. All rights reserved.</p>
+</footer>
+
+<style>
+    .fead{
+        text-align: center;
+    }
+</style>
+</html>
