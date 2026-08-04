@@ -166,7 +166,7 @@ background-color: goldenrod;
 #box-b {
     margin: 0;
     width: 4000px;
-    background-color: green;
+    background-color: lightgray;
     border-radius: 10px;
     border: 1px gray solid;
     box-shadow: 10px 10px 10px #aaa;
@@ -247,7 +247,7 @@ background-color: goldenrod;
 
 
 footer{
-    background-color: black;
+    background-color: #1e1e1e;
     background-size: cover;
     height: 22vh;
     justify-content: center;
